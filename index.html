@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Multicarrinho</title>
+  <meta name="description" content="Protótipo: compare cardápios de várias lojas e peça montagens com IA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap">
+</head>
+<body>
+
+<div class="page">
+  <article class="case">
+    <div class="eyebrow">Conceito de produto · Delivery · IA aplicada</div>
+    <h1>Multi<span>carrinho</span></h1>
+    <p class="lede">Hoje, comparar duas lojas num app de delivery exige esvaziar o carrinho e montar tudo de novo. Este protótipo mantém um carrinho por loja e usa IA para montar pedidos equivalentes em várias lojas a partir de uma frase.</p>
+
+    <h2>A dor</h2>
+    <p>Escolho itens numa pizzaria, quero ver quanto ficaria em outra com sabores diferentes e perco o primeiro carrinho. Quem compara desiste ou decide sem informação.</p>
+
+    <h2>Hipótese</h2>
+    <p>Se a pessoa puder montar e comparar carrinhos lado a lado, ou descrever a vontade e receber montagens prontas, ela chega mais rápido à decisão e abandona menos pedidos.</p>
+
+    <h2>Por que o carrinho continua único</h2>
+    <p>Um pedido tem uma loja, um entregador e uma taxa, e o carrinho único mantém a logística e o pagamento simples. Por isso a proposta não mexe no checkout: a comparação acontece antes, em Cardápios, e só o escolhido segue para pagamento.</p>
+
+    <h2>Métricas para validar</h2>
+    <ul>
+      <li>Taxa de conversão de carrinho em pedido</li>
+      <li>Abandono de carrinho após troca de loja</li>
+      <li>Tempo da abertura do app até o pedido</li>
+      <li>Ticket médio e uso de "Monte pra mim"</li>
+    </ul>
+
+    <p class="disclaimer">Projeto conceitual de portfólio, não afiliado a nenhuma plataforma de delivery. Lojas, cardápios e preços são fictícios. Sem chave da API configurada, um motor local de regras gera as sugestões.</p>
+  </article>
+
+  <div class="side">
+  <div class="phone" aria-label="Protótipo do app">
+    <header class="app-top">
+      <div class="brand">multi<i>carrinho</i></div>
+      <div class="addr">Entregar em<br><b>Batel, Curitiba</b></div>
+    </header>
+    <main id="view"></main>
+    <nav class="tabs" aria-label="Navegação do app">
+      <button class="tab" data-tab="lojas" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10l1.5-5h13L20 10M4 10h16M4 10v9h16v-9M9 19v-5h6v5"/></svg>Lojas</button>
+      <button class="tab" data-tab="chat" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v11H9l-5 4V5z"/><path d="M12 8l.9 1.8L15 10.5l-1.6 1.3.4 2-1.8-1-1.8 1 .4-2L9 10.5l2.1-.7z"/></svg>Monte pra mim</button>
+      <button class="tab" data-tab="cardapios" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="7.5" height="16" rx="1.5"/><rect x="13.5" y="4" width="7.5" height="16" rx="1.5"/><path d="M5.5 8h2.5M5.5 11h2.5M16 8h2.5M16 11h2.5"/></svg>Cardápios<span class="badge num" id="cardBadge" hidden></span></button>
+      <button class="tab" data-tab="carrinho" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4h2l2 11h11l2-8H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>Carrinho<span class="badge num" id="cartBadge" hidden></span></button>
+      <button class="tab" data-tab="pedidos" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>Pedidos<span class="badge num" id="ordBadge" hidden></span></button>
+    </nav>
+  </div>
+  <section class="how">
+    <h2>Como funciona</h2>
+    <div class="flow">
+      <div><b>1</b><span>A pessoa escreve o que quer: "frutos do mar para duas até R$ 70".</span></div>
+      <div><b>2</b><span>A IA recebe os cardápios e escolhe itens existentes em até 3 lojas, respondendo em JSON.</span></div>
+      <div><b>3</b><span>O app valida os itens e calcula preço, taxa e total. A IA nunca faz a conta.</span></div>
+      <div><b>4</b><span>Cada montagem vira um cardápio salvo. Os cardápios ficam lado a lado em "Cardápios" para comparar.</span></div>
+      <div><b>5</b><span>O cardápio escolhido vai para o Carrinho, que aceita uma loja por vez. Pago, ele vira um pedido confirmado.</span></div>
+    </div>
+  </section>
+  </div>
+  <section class="research" aria-label="Pesquisas e estudos">
+    <div class="research-head"><h2>Pesquisas e estudos</h2><span class="hint">Arraste para o lado →</span></div>
+    <div class="studies">
+      <section class="study">
+        <div class="tag">Meta-análise · Journal of Consumer Psychology, 2015</div>
+        <div class="big">Excesso de opções paralisa quando é difícil comparar e a pessoa não sabe o que quer.</div>
+        <p>Chernev, Böckenholt e Goodman reuniram 99 resultados de estudos anteriores, com 7.202 participantes. O excesso de opções leva a desistir ou adiar a compra em quatro situações: opções complexas, decisão trabalhosa, preferência incerta e vontade de gastar pouco esforço. As quatro descrevem quem abre um app de delivery com fome e sem decisão.</p>
+        <div class="src">Fonte: <a href="https://www.kellogg.northwestern.edu/academics-research/research/detail/2015/when-product-assortment-leads-to-choice-overload-a-conceptual/" target="_blank" rel="noopener">Kellogg School of Management</a></div>
+      </section>
+      <section class="study">
+        <div class="tag">Experimento de campo · Iyengar e Lepper, 2000</div>
+        <div class="big">Com 6 sabores, 30% compraram. Com 24, só 3%.</div>
+        <p>Numa degustação de geleias em um supermercado, a mesa com 24 sabores atraiu mais gente, mas converteu dez vezes menos. A amostra era pequena e réplicas posteriores tiveram resultados mistos, o que reforça a leitura da meta-análise acima: o efeito aparece quando comparar é difícil.</p>
+        <div class="src">Fontes: <a href="https://www.strategy-business.com/article/00046" target="_blank" rel="noopener">strategy+business</a> · <a href="https://www.iese.edu/insight/articles/choices-clients-how-many-offer/" target="_blank" rel="noopener">IESE Insight</a> · <a href="https://greenbook.org/insights/levelup-research-analytics/the-paradox-of-the-paradox-of-choice" target="_blank" rel="noopener">GreenBook</a></div>
+      </section>
+      <section class="study">
+        <div class="tag">E-commerce · Baymard Institute</div>
+        <div class="big">7 em cada 10 carrinhos são abandonados.</div>
+        <p>A taxa média é de 70,22%, calculada a partir de 50 estudos. A Baymard considera parte desse abandono inevitável porque inclui quem está comparando preços ou guardando itens para depois, justamente o comportamento que os Cardápios acolhem em vez de perder.</p>
+        <div class="src">Fonte: <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute</a></div>
+      </section>
+      <section class="study">
+        <div class="tag">Delivery no Brasil · Instituto QualiBest</div>
+        <div class="big">56% pedem delivery quando querem algo diferente ou não sabem o que preparar.</div>
+        <p>A maioria chega ao app sem uma decisão tomada. Para esse público, receber montagens prontas a partir de uma frase encurta o caminho até o pedido.</p>
+        <div class="src">Fonte: <a href="https://www.institutoqualibest.com/blog/aplicativos-de-delivery-perfil/" target="_blank" rel="noopener">Instituto QualiBest</a></div>
+      </section>
+      <section class="study">
+        <div class="tag">Delivery nos EUA · U.S. Foods, 2019</div>
+        <div class="big">46% navegam pelo app antes de escolher onde pedir.</div>
+        <p>Quase metade dos usuários não abre o app com uma loja em mente, ou seja, compara antes de decidir. Hoje essa comparação exige montar e desmontar carrinhos.</p>
+        <div class="src">Fonte: <a href="https://www.usnews.com/news/national-news/articles/2019-07-30/survey-people-willing-to-pay-more-for-food-delivery" target="_blank" rel="noopener">U.S. News</a></div>
+      </section>
+      <section class="study">
+        <div class="tag">Uso de apps · Statista, 2021</div>
+        <div class="big">A sessão média num app de delivery chegou a 17 minutos.</div>
+        <p>Na América do Norte, a sessão ficou cerca de 3 minutos mais longa que em 2019. Parte desse tempo é navegação e comparação, e cada minuto a mais é uma chance de desistência.</p>
+        <div class="src">Fonte: <a href="https://www.statista.com/statistics/1290343/food-delivery-apps-session-length-by-region/" target="_blank" rel="noopener">Statista</a></div>
+      </section>
+    </div>
+    <p class="gap-note"><b>Lacuna:</b> nenhum dado público mede quantos pedidos se perdem porque a pessoa não consegue comparar lojas. Esse é o próximo passo de validação, com os dados de uso do próprio app.</p>
+
+  </section>
+</div>
+<div id="toastHost"></div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

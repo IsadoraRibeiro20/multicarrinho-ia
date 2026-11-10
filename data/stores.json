@@ -1,0 +1,502 @@
+[
+  {
+    "id": "burger-x",
+    "nome": "Burger X",
+    "culinaria": "Lanches",
+    "cats": [
+      "burger"
+    ],
+    "taxa": 6.99,
+    "tempo": [
+      30,
+      40
+    ],
+    "nota": 4.7,
+    "itens": [
+      {
+        "id": "bx1",
+        "nome": "X-Burger Clássico",
+        "desc": "Blend 160g, queijo prato, alface e tomate",
+        "preco": 28.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "burger"
+        ]
+      },
+      {
+        "id": "bx2",
+        "nome": "X-Bacon Duplo",
+        "desc": "Dois blends 120g, bacon e cheddar",
+        "preco": 36.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "burger"
+        ]
+      },
+      {
+        "id": "bx3",
+        "nome": "Smash Salada",
+        "desc": "Smash duplo 90g, salada e molho da casa",
+        "preco": 26.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "burger"
+        ]
+      },
+      {
+        "id": "bx4",
+        "nome": "Combo Casal",
+        "desc": "2 X-Burger Clássico + batata grande",
+        "preco": 69.9,
+        "serve": 2,
+        "tipo": "prato",
+        "tags": [
+          "burger",
+          "batata"
+        ]
+      },
+      {
+        "id": "bx5",
+        "nome": "Batata Frita Média",
+        "desc": "Porção de 200g",
+        "preco": 14.9,
+        "serve": 1,
+        "tipo": "acomp",
+        "tags": [
+          "batata"
+        ]
+      },
+      {
+        "id": "bx6",
+        "nome": "Onion Rings",
+        "desc": "10 anéis empanados",
+        "preco": 16.9,
+        "serve": 2,
+        "tipo": "acomp",
+        "tags": [
+          "acomp"
+        ]
+      },
+      {
+        "id": "bx7",
+        "nome": "Refrigerante Lata",
+        "desc": "350 ml",
+        "preco": 6.5,
+        "serve": 1,
+        "tipo": "bebida",
+        "tags": [
+          "bebida"
+        ]
+      },
+      {
+        "id": "bx8",
+        "nome": "Brigadeiro Gourmet",
+        "desc": "Unidade de 30g",
+        "preco": 5.9,
+        "serve": 1,
+        "tipo": "doce",
+        "tags": [
+          "doce"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sushi-cwb",
+    "nome": "Sushi CWB",
+    "culinaria": "Japonesa",
+    "cats": [
+      "japonesa",
+      "mar"
+    ],
+    "taxa": 5.99,
+    "tempo": [
+      40,
+      50
+    ],
+    "nota": 4.8,
+    "itens": [
+      {
+        "id": "sc1",
+        "nome": "Temaki Salmão",
+        "desc": "Salmão, cebolinha e cream cheese",
+        "preco": 26.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "japonesa",
+          "mar"
+        ]
+      },
+      {
+        "id": "sc2",
+        "nome": "Temaki Camarão",
+        "desc": "Camarão empanado e molho tarê",
+        "preco": 29.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "japonesa",
+          "mar"
+        ]
+      },
+      {
+        "id": "sc3",
+        "nome": "Combinado 10 peças",
+        "desc": "Sashimi, niguiri e uramaki",
+        "preco": 29.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "japonesa",
+          "mar"
+        ]
+      },
+      {
+        "id": "sc4",
+        "nome": "Combinado 20 peças",
+        "desc": "Seleção do chef para dois",
+        "preco": 54.9,
+        "serve": 2,
+        "tipo": "prato",
+        "tags": [
+          "japonesa",
+          "mar"
+        ]
+      },
+      {
+        "id": "sc5",
+        "nome": "Hot Roll 10 peças",
+        "desc": "Salmão empanado com tarê",
+        "preco": 22.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "japonesa",
+          "mar"
+        ]
+      },
+      {
+        "id": "sc6",
+        "nome": "Soda Italiana",
+        "desc": "Maçã verde, 400 ml",
+        "preco": 12.9,
+        "serve": 1,
+        "tipo": "bebida",
+        "tags": [
+          "bebida"
+        ]
+      },
+      {
+        "id": "sc7",
+        "nome": "Refrigerante Lata",
+        "desc": "350 ml",
+        "preco": 6,
+        "serve": 1,
+        "tipo": "bebida",
+        "tags": [
+          "bebida"
+        ]
+      },
+      {
+        "id": "sc8",
+        "nome": "Harumaki Doce",
+        "desc": "Banana com chocolate, 2 unidades",
+        "preco": 13.9,
+        "serve": 1,
+        "tipo": "doce",
+        "tags": [
+          "doce"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pizza-boa",
+    "nome": "Pizza Boa",
+    "culinaria": "Pizzaria",
+    "cats": [
+      "pizza"
+    ],
+    "taxa": 4.99,
+    "tempo": [
+      35,
+      45
+    ],
+    "nota": 4.6,
+    "itens": [
+      {
+        "id": "pb1",
+        "nome": "Pizza Grande Calabresa",
+        "desc": "8 fatias, calabresa e cebola",
+        "preco": 49.9,
+        "serve": 3,
+        "tipo": "prato",
+        "tags": [
+          "pizza"
+        ]
+      },
+      {
+        "id": "pb2",
+        "nome": "Pizza Grande Marguerita",
+        "desc": "8 fatias, tomate e manjericão",
+        "preco": 47.9,
+        "serve": 3,
+        "tipo": "prato",
+        "tags": [
+          "pizza"
+        ]
+      },
+      {
+        "id": "pb3",
+        "nome": "Pizza Grande Camarão",
+        "desc": "8 fatias, camarão e catupiry",
+        "preco": 69.9,
+        "serve": 3,
+        "tipo": "prato",
+        "tags": [
+          "pizza",
+          "mar"
+        ]
+      },
+      {
+        "id": "pb4",
+        "nome": "Pizza Média Frango",
+        "desc": "6 fatias, frango com catupiry",
+        "preco": 39.9,
+        "serve": 2,
+        "tipo": "prato",
+        "tags": [
+          "pizza"
+        ]
+      },
+      {
+        "id": "pb5",
+        "nome": "Pizza Broto Doce",
+        "desc": "4 fatias, chocolate com morango",
+        "preco": 24.9,
+        "serve": 2,
+        "tipo": "doce",
+        "tags": [
+          "doce",
+          "pizza"
+        ]
+      },
+      {
+        "id": "pb6",
+        "nome": "Refrigerante 2 L",
+        "desc": "Garrafa para a mesa",
+        "preco": 14.9,
+        "serve": 4,
+        "tipo": "bebida",
+        "tags": [
+          "bebida"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mar-aberto",
+    "nome": "Mar Aberto",
+    "culinaria": "Frutos do mar e poke",
+    "cats": [
+      "mar"
+    ],
+    "taxa": 7.99,
+    "tempo": [
+      30,
+      40
+    ],
+    "nota": 4.7,
+    "itens": [
+      {
+        "id": "ma1",
+        "nome": "Poke Salmão",
+        "desc": "Arroz, salmão, manga e gergelim",
+        "preco": 34.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "mar"
+        ]
+      },
+      {
+        "id": "ma2",
+        "nome": "Poke Camarão",
+        "desc": "Arroz, camarão, edamame e abacate",
+        "preco": 36.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "mar"
+        ]
+      },
+      {
+        "id": "ma3",
+        "nome": "Isca de Peixe com Fritas",
+        "desc": "Tilápia empanada, serve 2",
+        "preco": 44.9,
+        "serve": 2,
+        "tipo": "prato",
+        "tags": [
+          "mar",
+          "batata"
+        ]
+      },
+      {
+        "id": "ma4",
+        "nome": "Camarão Empanado 300g",
+        "desc": "Com molho tártaro, serve 2",
+        "preco": 42.9,
+        "serve": 2,
+        "tipo": "prato",
+        "tags": [
+          "mar"
+        ]
+      },
+      {
+        "id": "ma5",
+        "nome": "Bobó de Camarão",
+        "desc": "Individual, com arroz",
+        "preco": 39.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "mar"
+        ]
+      },
+      {
+        "id": "ma6",
+        "nome": "Suco Natural",
+        "desc": "Laranja ou abacaxi, 400 ml",
+        "preco": 9.9,
+        "serve": 1,
+        "tipo": "bebida",
+        "tags": [
+          "bebida"
+        ]
+      },
+      {
+        "id": "ma7",
+        "nome": "Refrigerante Lata",
+        "desc": "350 ml",
+        "preco": 6.5,
+        "serve": 1,
+        "tipo": "bebida",
+        "tags": [
+          "bebida"
+        ]
+      },
+      {
+        "id": "ma8",
+        "nome": "Mousse de Maracujá",
+        "desc": "Pote de 150g",
+        "preco": 8.9,
+        "serve": 1,
+        "tipo": "doce",
+        "tags": [
+          "doce"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cantina-nonna",
+    "nome": "Cantina da Nonna",
+    "culinaria": "Massas",
+    "cats": [
+      "massa",
+      "mar"
+    ],
+    "taxa": 6.49,
+    "tempo": [
+      45,
+      55
+    ],
+    "nota": 4.5,
+    "itens": [
+      {
+        "id": "cn1",
+        "nome": "Espaguete ao Frutos do Mar",
+        "desc": "Lula, camarão e mexilhão",
+        "preco": 46.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "massa",
+          "mar"
+        ]
+      },
+      {
+        "id": "cn2",
+        "nome": "Risoto de Camarão",
+        "desc": "Arbóreo, limão siciliano",
+        "preco": 49.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "massa",
+          "mar"
+        ]
+      },
+      {
+        "id": "cn3",
+        "nome": "Lasanha Bolonhesa",
+        "desc": "Porção generosa, serve 2",
+        "preco": 58.9,
+        "serve": 2,
+        "tipo": "prato",
+        "tags": [
+          "massa"
+        ]
+      },
+      {
+        "id": "cn4",
+        "nome": "Nhoque ao Sugo",
+        "desc": "Batata e molho de tomate",
+        "preco": 32.9,
+        "serve": 1,
+        "tipo": "prato",
+        "tags": [
+          "massa"
+        ]
+      },
+      {
+        "id": "cn5",
+        "nome": "Pão de Alho",
+        "desc": "4 unidades",
+        "preco": 12.9,
+        "serve": 2,
+        "tipo": "acomp",
+        "tags": [
+          "acomp"
+        ]
+      },
+      {
+        "id": "cn6",
+        "nome": "Refrigerante Lata",
+        "desc": "350 ml",
+        "preco": 6.5,
+        "serve": 1,
+        "tipo": "bebida",
+        "tags": [
+          "bebida"
+        ]
+      },
+      {
+        "id": "cn7",
+        "nome": "Tiramisù",
+        "desc": "Fatia individual",
+        "preco": 15.9,
+        "serve": 1,
+        "tipo": "doce",
+        "tags": [
+          "doce"
+        ]
+      }
+    ]
+  }
+]
