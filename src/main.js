@@ -188,7 +188,7 @@ function renderChat(){
   }).join("");
   return `<div class="chat-head"><h2 class="h">Monte pra mim</h2>${mode}</div>
   <div class="msgs" aria-live="polite">
-    <div class="bubble bot">Olá! Qual a vontade de hoje, Isadora?</div>
+    <div class="bubble bot">Olá! Qual a vontade de hoje?</div>
     ${msgs}
     ${state.busy ? `<div class="thinking"><span class="dots"><i></i><i></i><i></i></span>Montando opções nas lojas…${state.ctl ? ' <button class="btn small ghost" type="button" data-stop>Parar</button>' : ""}</div>` : ""}
   </div>
