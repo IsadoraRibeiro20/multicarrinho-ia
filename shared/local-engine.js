@@ -110,6 +110,8 @@ export function localSuggest(text, stores, lastBudget = null) {
     mensagem = "Não encontrei lojas com o que você descreveu. Tente citar o tipo de comida, por exemplo pizza, japonês ou lanche.";
   } else if (budget != null && !within) {
     mensagem = `Nada coube em ${brl(budget)} com a entrega. Estas são as opções mais próximas para ${quem}.`;
+  } else if (budget != null && within < opts.length) {
+    mensagem = `${within} ${within > 1 ? "opções cabem" : "opção cabe"} em ${brl(budget)} com entrega para ${quem}. Também mostro ${opts.length - within > 1 ? "outras próximas" : "uma próxima"}, acima do orçamento.`;
   } else {
     mensagem = `Montei ${opts.length} ${opts.length > 1 ? "opções" : "opção"} para ${quem}${budget != null ? `, até ${brl(budget)} com entrega` : ""}. Escolha uma para virar carrinho.`;
   }

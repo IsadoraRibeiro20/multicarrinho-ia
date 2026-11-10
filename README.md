@@ -13,7 +13,7 @@ Hoje o app de delivery aceita um carrinho por vez. Para saber quanto ficaria o m
 | Aba | O que faz |
 |---|---|
 | **Lojas** | Monta um *cardápio* em cada loja. Nenhum se perde ao trocar de loja. |
-| **Monte pra mim** | A pessoa escreve "frutos do mar para duas até R$ 70" e o agente devolve até 3 montagens, uma por loja. |
+| **Monte pra mim** | A pessoa escreve "frutos do mar para duas até R$ 90" e o agente devolve até 3 montagens, uma por loja. |
 | **Cardápios** | Compara os cardápios montados: total com entrega, tempo e selos de menor preço e mais rápido. |
 | **Carrinho** | Continua único: uma loja por pedido, como no app atual. Só o cardápio escolhido vem para cá. |
 | **Pedidos** | Após o pagamento simulado, o pedido aparece como confirmado e acompanha o status. |
@@ -28,7 +28,7 @@ sequenceDiagram
     participant W as Front-end (Vite)
     participant S as Servidor (Express)
     participant A as Agente Montador (Claude)
-    U->>W: "frutos do mar para duas até R$ 70"
+    U->>W: "frutos do mar para duas até R$ 90"
     W->>S: POST /api/suggest
     S->>A: pedido + ferramentas
     A->>S: buscar_lojas / ver_cardapio / calcular_pedido

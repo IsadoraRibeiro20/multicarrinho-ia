@@ -36,7 +36,7 @@
 
 ### Exemplo de execução
 
-1. Pedido: "sushi pra dois até R$ 70".
+1. Pedido: "sushi pra dois até R$ 90".
 2. `buscar_lojas({categoria: "japonesa"})` → Sushi CWB.
 3. `ver_cardapio({loja_id: "sushi-cwb"})` → 8 itens.
 4. `calcular_pedido({loja_id: "sushi-cwb", itens: [{id: "sc4", qtd: 1}]})` → total R$ 60,89, serve 2.

@@ -9,8 +9,8 @@ import { suggestWithAI, fetchHealth } from "./api.js";
 const CATS = [["todos","Todos"],["mar","Frutos do mar"],["japonesa","Japonesa"],["pizza","Pizza"],["burger","Lanches"],["massa","Massas"]];
 const TIPO_LABEL = {prato:"Pratos", acomp:"Acompanhamentos", bebida:"Bebidas", doce:"Sobremesas"};
 const SEED_CARTS = {"burger-x":{bx1:1,bx7:1,bx5:1,bx8:1}, "sushi-cwb":{sc1:1,sc3:1,sc6:1}, "pizza-boa":{pb1:1,pb5:1}};
-const EXAMPLE_PROMPT = "Quero refeição para duas, estamos com vontade de comer frutos do mar até 70 reais";
-const PROMPT_CHIPS = ["Pizza pra 4 pessoas até R$ 120","Lanche com batata e refri pra 1 até R$ 50","Japonês pra dois com sobremesa até R$ 90"];
+const EXAMPLE_PROMPT = "Quero refeição para duas, estamos com vontade de comer frutos do mar até 90 reais";
+const PROMPT_CHIPS = ["Jantar para duas com refri até R$ 90","Almoço para 1 pessoa até R$ 45","Jantar para duas pessoas com sobremesa até R$ 100"];
 const STORE_KEY = "multicarrinho:carts:v1";
 
 const byId = indexStores(STORES);
@@ -186,7 +186,7 @@ function renderChat(){
       + (m.note ? `<div class="meta">${esc(m.note)}</div>` : "")
       + (m.sugs || []).map((sg, si) => sugCard(sg, m.budget, mi, si)).join("");
   }).join("");
-  return `<div class="chat-head"><h2 class="h">Monte pra mim</h2>${mode}</div>
+  return `<div class="chat-head"><h2 class="h">Monte pra mim</h2><div style="display:flex;gap:8px;align-items:center">${mode}<button class="btn small ghost" type="button" data-resetchat ${state.busy ? "disabled" : ""}>Limpar conversa</button></div></div>
   <div class="msgs" aria-live="polite">
     <div class="bubble bot">Olá! Qual a vontade de hoje?</div>
     ${msgs}
@@ -194,7 +194,7 @@ function renderChat(){
   </div>
   <div class="composer">
     <div class="chips">${PROMPT_CHIPS.map(p => `<button class="chip" type="button" data-prompt="${esc(p)}">${esc(p)}</button>`).join("")}</div>
-    <form id="chatForm"><textarea id="chatInput" rows="1" placeholder="Ex.: sushi pra dois até R$ 90" aria-label="Descreva o que você quer comer"></textarea>
+    <form id="chatForm"><textarea id="chatInput" rows="1" placeholder="Ex.: jantar para duas até R$ 80" aria-label="Descreva o que você quer comer"></textarea>
       <button class="btn" type="submit" ${state.busy ? "disabled" : ""}>Enviar</button></form>
   </div>`;
 }
@@ -324,6 +324,7 @@ document.addEventListener("click", e => {
   }
   if (d.prompt){ send(d.prompt); return; }
   if (d.stop !== undefined){ state.ctl?.abort(); return; }
+  if (d.resetchat !== undefined){ if (!state.busy){ seedChat(); render(); } return; }
 });
 document.addEventListener("submit", e => {
   if (e.target.id !== "chatForm") return;
@@ -384,11 +385,12 @@ document.addEventListener("keydown", e => {
 })();
 
 /* ---------- Boot ---------- */
-(function seedChat(){
+function seedChat(){
   const r = localSuggest(EXAMPLE_PROMPT, STORES);
   state.chat = [{role:"user", text:EXAMPLE_PROMPT, example:true},
     {role:"assistant", source:"local", text:r.mensagem, sugs:r.sugestoes, budget:r.budget, example:true}];
   state.lastBudget = null;
-})();
+}
+seedChat();
 render();
 fetchHealth().then(ok => { state.ia = ok; if (state.tab === "chat") render(false); });
