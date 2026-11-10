@@ -4,6 +4,12 @@ Protótipo de produto para apps de delivery: **compare cardápios de várias loj
 
 > Projeto conceitual de portfólio, não afiliado a nenhuma plataforma de delivery. Lojas, cardápios e preços são fictícios.
 
+## Demonstração
+
+[![Demonstração do Multicarrinho em vídeo](docs/demo-capa.png)](docs/demo.mp4)
+
+[Assistir à demonstração (2 min)](docs/demo.mp4): pedido em linguagem natural com IA, comparação de cardápios, carrinho único, pagamento e pedido confirmado.
+
 ## A dor
 
 Hoje o app de delivery aceita um carrinho por vez. Para saber quanto ficaria o mesmo pedido em outra loja, é preciso esvaziar o carrinho e montar tudo de novo. Quem compara desiste ou decide sem informação.
